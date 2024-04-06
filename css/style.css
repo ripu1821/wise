@@ -1453,15 +1453,15 @@ a:focus {
 }
 
 /*******************************/
-/******** Portfolio CSS ********/
+/******** employees CSS ********/
 /*******************************/
-.portfolio {
+.employees {
   position: relative;
   padding: 45px 0;
   background: #ffffff;
 }
 
-.portfolio #portfolio-flters {
+.employees #employees-flters {
   padding: 0;
   margin: -15px 0 25px 0;
   list-style: none;
@@ -1469,8 +1469,8 @@ a:focus {
   text-align: center;
 }
 
-.portfolio #portfolio-flters li,
-.portfolio .load-more .btn {
+.employees #employees-flters li,
+.employees .load-more .btn {
   cursor: pointer;
   display: inline-block;
   margin: 5px;
@@ -1484,27 +1484,27 @@ a:focus {
   transition: 0.5s;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.employees #employees-flters li:hover,
+.employees #employees-flters li.filter-active {
   background: #ffffff;
   color: #213546;
 }
 
-.portfolio .load-more {
+.employees .load-more {
   text-align: center;
 }
 
-.portfolio .load-more .btn {
+.employees .load-more .btn {
   margin: 25px 0;
   padding: 15px 40px;
   transition: 0.5s;
 }
 
-.portfolio .load-more .btn:hover {
+.employees .load-more .btn:hover {
   background: linear-gradient(#50dee8, #0ad4e2);
 }
 
-.portfolio .portfolio-item {
+.employees .employees-item {
   position: relative;
   height: 280px;
   margin-bottom: 30px;
@@ -1512,7 +1512,7 @@ a:focus {
   overflow: hidden;
 }
 
-.portfolio .portfolio-item figure {
+.employees .employees-item figure {
   background: #ffffff;
   overflow: hidden;
   height: 280px;
@@ -1521,20 +1521,20 @@ a:focus {
   margin: 0;
 }
 
-.portfolio .portfolio-item figure img {
+.employees .employees-item figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.portfolio .portfolio-item figure:hover img {
+.employees .employees-item figure:hover img {
   opacity: 0.3;
   transition: 0.3s;
 }
 
-.portfolio .portfolio-item figure .link-preview,
-.portfolio .portfolio-item figure .link-details {
+.employees .employees-item figure .link-preview,
+.employees .employees-item figure .link-details {
   position: absolute;
   display: inline-block;
   opacity: 0;
@@ -1547,44 +1547,44 @@ a:focus {
   transition: 0.5s;
 }
 
-.portfolio .portfolio-item figure .link-preview i,
-.portfolio .portfolio-item figure .link-details i {
+.employees .employees-item figure .link-preview i,
+.employees .employees-item figure .link-details i {
   color: #ffffff;
   padding-top: 9px;
   font-size: 16px;
 }
 
-.portfolio .portfolio-item figure .link-preview:hover,
-.portfolio .portfolio-item figure .link-details:hover {
+.employees .employees-item figure .link-preview:hover,
+.employees .employees-item figure .link-details:hover {
   background: linear-gradient(#50dee8, #0ad4e2);
 }
 
-.portfolio .portfolio-item figure .link-preview:hover i,
-.portfolio .portfolio-item figure .link-details:hover i {
+.employees .employees-item figure .link-preview:hover i,
+.employees .employees-item figure .link-details:hover i {
   color: #ffffff;
 }
 
-.portfolio .portfolio-item figure .link-preview {
+.employees .employees-item figure .link-preview {
   top: 50%;
   left: calc(50% - 61px);
 }
 
-.portfolio .portfolio-item figure .link-details {
+.employees .employees-item figure .link-details {
   top: 50%;
   right: calc(50% - 61px);
 }
 
-.portfolio .portfolio-item figure:hover .link-preview {
+.employees .employees-item figure:hover .link-preview {
   opacity: 1;
   top: calc(50% - 50px);
 }
 
-.portfolio .portfolio-item figure:hover .link-details {
+.employees .employees-item figure:hover .link-details {
   opacity: 1;
   top: calc(50% - 50px);
 }
 
-.portfolio .portfolio-item figure .portfolio-title {
+.employees .employees-item figure .employees-title {
   position: absolute;
   margin: 0;
   width: 100%;
@@ -1601,8 +1601,14 @@ a:focus {
   border-radius: 0;
 }
 
-.portfolio .portfolio-item figure .portfolio-title:hover {
+.employees .employees-item figure .employees-title:hover {
   text-decoration: none;
+}
+.employees-img {
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    object-fit: cover;
+    object-position: center;
 }
 
 /*******************************/
