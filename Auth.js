@@ -47,6 +47,7 @@ signOutButton.addEventListener("click", async () => {
       console.error("Error signing out:", error.message);
     } else {
       console.log("User signed out successfully");
+      window.location.href = "os-admin.html";
       localStorage.removeItem("isLoggedIn");
       updateContentVisibility();
       alert("Logged out successfully.");

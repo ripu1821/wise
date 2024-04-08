@@ -9,7 +9,7 @@
     <meta content="Bootstrap Agency Template" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -56,11 +56,9 @@
                                 data-target="#navbarCollapse">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-
                             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                 <div class="navbar-nav ml-auto">
-                                    <a href="os-admin.html" class="nav-item nav-link ">Admin</a>
-                                    <a href="admin-employee.html" class="nav-item nav-link active">Admin Employees</a>
+                                    <button class="logout-btn" id="signOutBtn">Logout</button>
                                 </div>
                             </div>
                         </div>
@@ -70,16 +68,17 @@
         </div>
         <!-- Header End -->
 
-    <!-- Add Employee Form -->
-    <div class="about container text-center" id="addEmployeeForm">
-        <h1>Add New Employee</h1>
-        <input class="input-field" type="text" id="employeeName" placeholder="Employee Name">
-        <input class="input-field" type="text" id="employeeRole" placeholder="Employee Role">
-        <button class="add-btn" id="addEmployeeBtn">Add Employee</button>
-    </div>
+        <!-- Add Employee Form -->
 
-    <!-- Employee List -->
-    <!-- <div class="about"> -->
+        <div class="about container text-center" id="addEmployeeForm">
+            <h1>Add New Employee</h1>
+            <input class="input-field" type="text" id="employeeName" placeholder="Employee Name">
+            <input class="input-field" type="text" id="employeeRole" placeholder="Employee Role">
+            <button class="add-btn" id="addEmployeeBtn">Add Employee</button>
+        </div>
+
+        <!-- Employee List -->
+        <!-- <div class="about"> -->
         <h1 class="text-center">Employees</h1>
         <div class="container">
             <div id="addEmployeeBtn">
@@ -89,76 +88,77 @@
                 </table>
             </div>
         </div>
-    <!-- </div> -->
+        <!-- </div> -->
 
-<!-- Model for update -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <label for="name">Name:</label>
-      <input class="update-field" type="text" id="name">
-      <label for="role">Role:</label>
-      <input class="update-field"type="text" id="role">
-      <button class="update-btn" id="updateBtn">Update</button>
-    </div>
-  </div>
+        <!-- Model for update -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <label for="name">Name:</label>
+                <input class="update-field" type="text" id="name">
+                <label for="role">Role:</label>
+                <input class="update-field" type="text" id="role">
+                <button class="update-btn" id="updateBtn">Update</button>
+            </div>
+        </div>
 
-     <!-- Footer Start -->
-     <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="footer-about">
-                        <h2>About Us</h2>
-                        <p>
-                            Empowering businesses with innovative IT solutions for a digital future.
-                        </p>
-                        <br>
-                        <p><i class="fa fa-map-marker-alt"></i>H.O 183, 2nd Floor, Manohar Plaza, Udaipole, Udaipur, Rajasthan 313001</p>
-                        <p><i class="fa fa-phone-alt"></i>0294-2489325</p>
-                        <p><i class="fa fa-envelope"></i>support@wiseit.in</p>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="footer-link">
-                                <h2>Useful Link</h2>
-                                <a href="index.html">Home</a>
-                                <a href="about.html">About Us</a>
-                                <a href="">Our Services</a>
-                                <a href="employees.html">Our Employees</a>
-                                <a href="news.html">Latest news</a>
-                                <a href="contact.html">Contact Us</a>
-                            </div>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="footer-about">
+                            <h2>About Us</h2>
+                            <p>
+                                Empowering businesses with innovative IT solutions for a digital future.
+                            </p>
+                            <br>
+                            <p><i class="fa fa-map-marker-alt"></i>H.O 183, 2nd Floor, Manohar Plaza, Udaipole, Udaipur,
+                                Rajasthan 313001</p>
+                            <p><i class="fa fa-phone-alt"></i>0294-2489325</p>
+                            <p><i class="fa fa-envelope"></i>support@wiseit.in</p>
                         </div>
-                        <div class="col-md-6">
-                            <div class="footer-link">
-                                <h2>Useful Link</h2>
-                                <a href="">Our Clients</a>
-                                <a href="">Clients Review</a>
-                                <a href="">Ongoing Customer</a>
-                                <a href="">Customer Support</a>
-                                <a href="">FAQs</a>
-                                <a href="contact.html">Site Map</a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Useful Link</h2>
+                                    <a href="index.html">Home</a>
+                                    <a href="about.html">About Us</a>
+                                    <a href="">Our Services</a>
+                                    <a href="employees.html">Our Employees</a>
+                                    <a href="news.html">Latest news</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Useful Link</h2>
+                                    <a href="">Our Clients</a>
+                                    <a href="">Clients Review</a>
+                                    <a href="">Ongoing Customer</a>
+                                    <a href="">Customer Support</a>
+                                    <a href="">FAQs</a>
+                                    <a href="contact.html">Site Map</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container copyright">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; RRR</p>
-                </div>
-                <div class="col-md-6">
-                    <p>Original</p>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; RRR</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Original</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
     </div>
 
     <!-- Javascript files-->

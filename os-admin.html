@@ -9,7 +9,8 @@
    <meta content="Bootstrap Agency Template" name="description">
 
    <!-- Favicon -->
-   <link href="img/favicon.ico" rel="icon">
+   <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
+   
 
    <!-- Google Font -->
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -57,8 +58,6 @@
 
                      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav ml-auto">
-                           <a href="os-admin.html" class="nav-item nav-link active">Admin</a>
-                           <a href="admin-employee.html" class="nav-item nav-link">Admin Employees</a>
                         </div>
                      </div>
                   </div>
@@ -68,20 +67,25 @@
       </div>
       <!-- Header End -->
 
-      <div class="about">
+      <div class="admin">
          <div id="content">
             <h1>Welcome to the Secret Area</h1>
             <p>This is some super secret content that only authenticated users should see.</p>
             <button class="add-btn" id="signOutBtn">Sign out</button>
          </div>
 
-         <div id="loginFormdiv">
-            <h1 class="section-header">Login</h1>
-            <div class="row justify-content-center">
-               <input class="input-field" type="text" id="username" placeholder="Username" value="">
-               <input class="input-field" type="password" id="password" placeholder="Password" value="">
-               <button class="add-btn" id="signInBtn">Sign In</button>
+         <div id="loginFormdiv" class="login-container">
+            <h2 class="login-h2">Login</h2>
+            <div class="input-container">
+               <i class="fa fa-envelope"></i>
+               <input class="login-input" type="text" id="username" placeholder="Username" value="">
             </div>
+            <div class="input-container">
+               <i class="fa fa-lock"></i>
+               <input class="login-input" type="password" id="password" placeholder="Password" value="">
+            </div>
+   
+            <button class="login-button" id="signInBtn">Sign In</button>
          </div>
       </div>
    </div>
