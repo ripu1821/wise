@@ -10,7 +10,7 @@
 
    <!-- Favicon -->
    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
-   
+
 
    <!-- Google Font -->
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -58,6 +58,7 @@
 
                      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav ml-auto">
+                           <button class="logout-btn" id="signOutBtn">Logout</button>
                         </div>
                      </div>
                   </div>
@@ -69,9 +70,43 @@
 
       <div class="admin">
          <div id="content">
-            <h1>Welcome to the Secret Area</h1>
+            <!-- <h1>Welcome to the Secret Area</h1>
             <p>This is some super secret content that only authenticated users should see.</p>
-            <button class="add-btn" id="signOutBtn">Sign out</button>
+            <button class="add-btn" id="signOutBtn">Sign out</button> -->
+            <div id="employeeDetails">
+               <!-- Add Employee Form -->
+               <div class="about container text-center" id="addEmployeeForm">
+                  <h1>Add New Employee</h1>
+                  <input class="input-field" type="text" id="employeeName" placeholder="Employee Name">
+                  <input class="input-field" type="text" id="employeeRole" placeholder="Employee Role">
+                  <button class="add-btn" id="addEmployeeBtn">Add Employee</button>
+               </div>
+
+               <!-- Employee List -->
+               <!-- <div class="about"> -->
+               <h1 class="text-center">Employees</h1>
+               <div class="container">
+                  <div id="addEmployeeBtn">
+                     <table class="table">
+                        <tbody id="employeeTableBody">
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <!-- </div> -->
+
+               <!-- Model for update -->
+               <div id="myModal" class="modal">
+                  <div class="modal-content">
+                     <span class="close">&times;</span>
+                     <label for="name">Name:</label>
+                     <input class="update-field" type="text" id="name">
+                     <label for="role">Role:</label>
+                     <input class="update-field" type="text" id="role">
+                     <button class="update-btn" id="updateBtn">Update</button>
+                  </div>
+               </div>
+            </div>
          </div>
 
          <div id="loginFormdiv" class="login-container">
@@ -84,7 +119,7 @@
                <i class="fa fa-lock"></i>
                <input class="login-input" type="password" id="password" placeholder="Password" value="">
             </div>
-   
+
             <button class="login-button" id="signInBtn">Sign In</button>
          </div>
       </div>

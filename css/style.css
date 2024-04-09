@@ -1914,6 +1914,7 @@ a:focus {
   height: auto;
   border-radius: 50%;
   margin-bottom: 10px;
+  background: #50dee8;
 }
 
 .footer {
