@@ -310,25 +310,27 @@ async function displayEmployeeList() {
   const employees = await getEmployees();
   if (employees) {
     const employeeList = document.getElementById("employeeList");
-    employeeList.innerHTML = "";
+    if (employeeList) {
+      employeeList.innerHTML = "";
+      employees.forEach((employee) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+                <td>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                            <div class="employee-card">
+                                <img src="img/employee.jpg" alt="Employee Image">
+                                <h3>${employee.name}</h3>
+                                <h4>${employee.role}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            `;
+        employeeList.appendChild(row);
+      });
+    }
 
-    employees.forEach((employee) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-              <td>
-                  <div class="row justify-content-center">
-                      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                          <div class="employee-card">
-                              <img src="img/employee.jpg" alt="Employee Image">
-                              <h3>${employee.name}</h3>
-                              <h4>${employee.role}</h4>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          `;
-      employeeList.appendChild(row);
-    });
   } else {
     console.log("Failed to retrieve employee data.");
   }
