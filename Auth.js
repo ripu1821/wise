@@ -30,7 +30,7 @@ signInButton?.addEventListener("click", async () => {
       console.log("Session:", data?.session);
       if (data?.user && data?.session) {
         localStorage.setItem("isLoggedIn", "true");
-        document.getElementById("signOutBtn").style.display = "block";
+        signOutButton.style.display = "block";
         updateContentVisibility();
       }
     }
@@ -50,7 +50,7 @@ signOutButton?.addEventListener("click", async () => {
       window.location.href = "os-admin.html";
       localStorage.removeItem("isLoggedIn");
       updateContentVisibility();
-      document.getElementById("signOutBtn").style.display = "none";
+      signOutButton.style.display = "none";
       alert("Logged out successfully.");
     }
   } catch (error) {
@@ -142,17 +142,17 @@ async function displayEmployees() {
     employeeTableBody.innerHTML = "";
 
     employees.forEach((employee) => {
-      const row = document.createElement("tr");
+      const row = document.createElement("div");
+    row.classList.add('item');
       row.innerHTML = `
-      <td class="item">
-                      <img src="img/employee.jpg" alt="Employee Image">
+     
+     <img src="img/employee.jpg" alt="Employee Image">
                       <h3>${employee.name}</h3>
                       <h4>${employee.role}</h4>
-               <div  style="margin-bottom: 10px;">
-               <button class="edit-btn" data-id="${employee.id}">Edit</button>
-               <button class="delete-btn" data-id="${employee.id}">Delete</button>
-               </div>
-      </td>
+                      <div  style="margin-bottom: 10px;">
+                       <button class="edit-btn" data-id="${employee.id}">Edit</button>
+                       <button class="delete-btn" data-id="${employee.id}">Delete</button>
+                      </div>
   `;
 
       employeeTableBody.appendChild(row);
@@ -336,5 +336,14 @@ async function displayEmployeeList() {
   }
 }
 
+function checkUserStatus(){
+  if (localStorage.getItem("isLoggedIn") == "true") {
+    signOutButton.style.display = "block";
+  } else {
+    signOutButton.style.display = "none";
+  }
+}
+
 // Call displayEmployees function to initially populate the employee list
 displayEmployeeList();
+checkUserStatus();
