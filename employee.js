@@ -134,7 +134,6 @@ async function deleteEmployee(id) {
   }
 }
 
-
 // Get the modal
 const modal = document.getElementById("myModal");
 
@@ -244,16 +243,10 @@ async function displayEmployeeList() {
     employees.forEach((employee) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                    <div class="employee-card">
+        <td class="item">
                         <img src="img/employee.jpg" alt="Employee Image">
                         <h3>${employee.name}</h3>
                         <h4>${employee.role}</h4>
-                    </div>
-                </div>
-            </div>
         </td>
     `;
 
@@ -265,7 +258,6 @@ async function displayEmployeeList() {
 }
 // Call displayEmployees function to initially populate the employee list
 displayEmployeeList();
-
 
 signOutButton.addEventListener("click", async () => {
   console.log("successfully");

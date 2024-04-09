@@ -144,18 +144,14 @@ async function displayEmployees() {
     employees.forEach((employee) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td>
-          <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                  <div class="employee-card">
+      <td class="item">
                       <img src="img/employee.jpg" alt="Employee Image">
                       <h3>${employee.name}</h3>
                       <h4>${employee.role}</h4>
-                      <button class="edit-btn" data-id="${employee.id}">Edit</button>
-                      <button class="delete-btn" data-id="${employee.id}">Delete</button>
-                  </div>
-              </div>
-          </div>
+               <div  style="margin-bottom: 10px;">
+               <button class="edit-btn" data-id="${employee.id}">Edit</button>
+               <button class="delete-btn" data-id="${employee.id}">Delete</button>
+               </div>
       </td>
   `;
 
@@ -313,12 +309,12 @@ async function displayEmployeeList() {
   console.log("ripu");
   const employees = await getEmployees();
   if (employees) {
-      const employeeList = document.getElementById("employeeList");
-      employeeList.innerHTML = "";
+    const employeeList = document.getElementById("employeeList");
+    employeeList.innerHTML = "";
 
-      employees.forEach((employee) => {
-          const row = document.createElement("tr");
-          row.innerHTML = `
+    employees.forEach((employee) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
               <td>
                   <div class="row justify-content-center">
                       <div class="col-lg-6 col-md-6 col-sm-12 text-center">
@@ -331,10 +327,10 @@ async function displayEmployeeList() {
                   </div>
               </td>
           `;
-          employeeList.appendChild(row);
-      });
+      employeeList.appendChild(row);
+    });
   } else {
-      console.log("Failed to retrieve employee data.");
+    console.log("Failed to retrieve employee data.");
   }
 }
 
