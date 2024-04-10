@@ -1954,7 +1954,7 @@ a:focus {
 .delete-btn {
   margin-top: 2px;
   font-size: 17px;
-  background-color: #c94b07;
+  background-color: #ff000080;
   color: #fff;
   padding: 7px 0px;
   width: 80px;
@@ -1967,15 +1967,15 @@ a:focus {
 }
 
 .delete-btn:hover {
-  background: #f7f7f7;
-  color: #c94b07;
+  /* background: #f7f7f7; */
+  background-color: red;
   transition: ease-in all 0.5s;
 }
 
 .edit-btn {
   margin-top: 2px;
   font-size: 17px;
-  background-color: #66f545;
+  background-color: #43cc23a8;
   color: #fff;
   padding: 7px 0px;
   width: 80px;
@@ -1988,8 +1988,8 @@ a:focus {
 }
 
 .edit-btn:hover {
-  background: #f7f7f7;
-  color: #66f545;
+  /* background: #f7f7f7; */
+  background-color: #32ce0f;
   transition: ease-in all 0.5s;
 }
 
@@ -2157,5 +2157,18 @@ a:focus {
 @media (max-width: 576px) {
   .item {
       width: calc(100% - 20px);
+  }
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .list-row {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

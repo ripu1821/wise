@@ -347,3 +347,7 @@ function checkUserStatus(){
 // Call displayEmployees function to initially populate the employee list
 displayEmployeeList();
 checkUserStatus();
+document.getElementById('addEmployeeBtn').addEventListener('click', function() {
+  document.getElementById('employeeName').value = '';
+  document.getElementById('employeeRole').value = '';
+});
